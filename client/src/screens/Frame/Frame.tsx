@@ -241,10 +241,10 @@ const HomePage = (): JSX.Element => {
     <div ref={containerRef} className="relative w-full min-h-screen bg-black perspective-1000 preserve-3d">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent pointer-events-none" />
       
-      <header className="relative flex items-center justify-between w-full h-[72px] px-4 animate-fadeIn z-50">
+      <header className="relative flex items-center justify-between w-full h-[72px] px-4 md:px-6 lg:px-8 animate-fadeIn z-50">
         <Logo />
         
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           {user ? (
             <>
               <Link to="/challenges">
@@ -265,7 +265,6 @@ const HomePage = (): JSX.Element => {
                   Log In
                 </Button>
               </Link>
-
               <button
                 onClick={async (e) => {
                   e.preventDefault();
@@ -291,7 +290,7 @@ const HomePage = (): JSX.Element => {
                 className="flex items-center gap-2 bg-[#24292e] hover:bg-[#2f363d] px-4 py-2 rounded-md text-white transition-all duration-300 hover:translate-y-[-1px] transform-gpu hover:translate-z-20"
               >
                 <GithubIcon className="w-5 h-5" />
-                <span className="text-[14px] font-medium">Continue with GitHub</span>
+                <span className="text-[14px] font-medium hidden md:inline">Continue with GitHub</span>
               </button>
             </>
           )}
@@ -300,46 +299,39 @@ const HomePage = (): JSX.Element => {
 
       <section 
         ref={heroRef} 
-        className="relative flex flex-col items-center justify-center w-full pt-16 pb-24 text-center animate-slideUp transition-transform duration-300 ease-out transform-gpu preserve-3d z-30"
+        className="relative flex flex-col items-center justify-center w-full pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-24 text-center animate-slideUp transition-transform duration-300 ease-out transform-gpu preserve-3d z-30"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/5 via-transparent to-purple-900/5 pointer-events-none" />
         
-        <span>
-          <h1 className="relative font-bold text-purple-600 text-[58.5px] leading-[60px] [font-family:'Inter',Helvetica] transform-gpu translate-z-50 animate-float typing-text">
+        <h1 className="relative font-bold text-purple-600 responsive-heading leading-tight md:leading-[60px] [font-family:'Inter',Helvetica] transform-gpu translate-z-50 animate-float typing-text">
           Stake Your Code.
-          </h1>
-        </span>
+        </h1>
 
-        <span>
-          <h2 className="relative mt-4 font-bold text-purple-600 text-[47.2px] leading-[48px] [font-family:'Inter',Helvetica] animate-fadeIn animation-delay-200 transform-gpu translate-z-40">
+        <h2 className="relative mt-2 md:mt-4 font-bold text-purple-600 responsive-subheading leading-tight md:leading-[48px] [font-family:'Inter',Helvetica] animate-fadeIn animation-delay-200 transform-gpu translate-z-40">
           Level Up Your Career.
         </h2>
-        </span>
 
-        <p className="relative max-w-[628px] mt-8 text-gray-400 text-[14.9px] leading-6 animate-fadeIn animation-delay-300 transform-gpu translate-z-30">
-          Join a community of developers who bet on themselves. Create coding
-          challenges, stake
-          <br />
-          crypto, and earn rewards for consistent progress.
+        <p className="relative max-w-[328px] md:max-w-[528px] lg:max-w-[628px] mt-4 md:mt-6 lg:mt-8 text-gray-400 responsive-text leading-relaxed animate-fadeIn animation-delay-300 transform-gpu translate-z-30">
+          Join a community of developers who bet on themselves. Create coding challenges, stake crypto, and earn rewards.
         </p>
 
-        <div className="relative flex gap-4 mt-12 animate-fadeIn animation-delay-400 transform-gpu translate-z-20">
+        <div className="flex flex-col md:flex-row items-center gap-4 mt-8">
           {user ? (
             <>
               <Link to="/challenges">
-                <Button className="h-12 px-8 text-[17px] bg-purple-600 hover:bg-purple-700 transition-all duration-300 hover:scale-[1.02] transform-gpu shadow-[0_8px_16px_rgba(147,51,234,0.2)] hover:shadow-[0_12px_24px_rgba(147,51,234,0.3)] hover:translate-z-30">
+                <Button className="w-full md:w-auto h-10 md:h-12 px-6 md:px-8 text-base md:text-[17px] bg-purple-600 hover:bg-purple-700 transition-all duration-300 hover:scale-[1.02] transform-gpu shadow-[0_8px_16px_rgba(147,51,234,0.2)] hover:shadow-[0_12px_24px_rgba(147,51,234,0.3)] hover:translate-z-30">
                   View Challenges
                 </Button>
               </Link>
               <Link to="/dashboard">
-                <Button className="h-12 px-8 text-[17px] bg-purple-600 hover:bg-purple-700 transition-all duration-300 hover:scale-[1.02] transform-gpu shadow-[0_8px_16px_rgba(147,51,234,0.2)] hover:shadow-[0_12px_24px_rgba(147,51,234,0.3)] hover:translate-z-30">
+                <Button className="w-full md:w-auto h-10 md:h-12 px-6 md:px-8 text-base md:text-[17px] bg-purple-600 hover:bg-purple-700 transition-all duration-300 hover:scale-[1.02] transform-gpu shadow-[0_8px_16px_rgba(147,51,234,0.2)] hover:shadow-[0_12px_24px_rgba(147,51,234,0.3)] hover:translate-z-30">
                   Go to Dashboard
                 </Button>
               </Link>
             </>
           ) : (
             <Link to="/register">
-              <Button className="h-12 px-8 text-[17px] bg-purple-600 hover:bg-purple-700 transition-all duration-300 hover:scale-[1.02] transform-gpu shadow-[0_8px_16px_rgba(147,51,234,0.2)] hover:shadow-[0_12px_24px_rgba(147,51,234,0.3)] hover:translate-z-30">
+              <Button className="w-full md:w-auto h-10 md:h-12 px-6 md:px-8 text-base md:text-[17px] bg-purple-600 hover:bg-purple-700 transition-all duration-300 hover:scale-[1.02] transform-gpu shadow-[0_8px_16px_rgba(147,51,234,0.2)] hover:shadow-[0_12px_24px_rgba(147,51,234,0.3)] hover:translate-z-30">
                 Create Account
               </Button>
             </Link>

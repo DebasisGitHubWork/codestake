@@ -69,10 +69,30 @@
     --radius: 0.5rem;
   }
 
+  /* Default styles for mobile */
   html {
-    zoom: 150%;
-    -moz-transform: scale(1.5);
+    zoom: 100%;
+    -moz-transform: scale(1);
     -moz-transform-origin: 0 0;
+    font-size: 14px;
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) {
+    html {
+      zoom: 125%;
+      -moz-transform: scale(1.25);
+      font-size: 16px;
+    }
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    html {
+      zoom: 150%;
+      -moz-transform: scale(1.5);
+      font-size: 16px;
+    }
   }
 
   * {
@@ -109,6 +129,19 @@
     white-space: nowrap;
     margin: 0 auto;
     animation: typing 6s steps(40, end) infinite;
+  }
+
+  /* Responsive text sizes */
+  .responsive-heading {
+    @apply text-3xl md:text-4xl lg:text-[58.5px];
+  }
+
+  .responsive-subheading {
+    @apply text-2xl md:text-3xl lg:text-[47.2px];
+  }
+
+  .responsive-text {
+    @apply text-sm md:text-base lg:text-[14.9px];
   }
 
   @keyframes typing {
