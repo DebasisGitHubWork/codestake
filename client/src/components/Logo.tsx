@@ -38,9 +38,14 @@ export const Logo = () => {
             />
           </svg>
         </div>
-        <span className="font-bold text-[22.9px] leading-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600 animate-gradient group-hover:from-purple-500 group-hover:to-purple-700">
-          CodeStake
-        </span>
+        <div className="flex">
+          <span className="font-bold text-[22.9px] leading-8 text-purple-600 neon-purple">
+            Code
+          </span>
+          <span className="font-bold text-[22.9px] leading-8 text-white neon-white">
+            Stake
+          </span>
+        </div>
       </div>
     </Link>
   );
