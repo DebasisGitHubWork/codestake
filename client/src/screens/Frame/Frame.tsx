@@ -303,13 +303,15 @@ const HomePage = (): JSX.Element => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/5 via-transparent to-purple-900/5 pointer-events-none" />
         
-        <h1 className="relative font-bold text-purple-600 responsive-heading leading-tight md:leading-[60px] [font-family:'Inter',Helvetica] transform-gpu translate-z-50 animate-float typing-text">
+        <span><h1 className="relative font-bold text-purple-600 responsive-heading leading-tight md:leading-[60px] [font-family:'Inter',Helvetica] transform-gpu translate-z-50 animate-float typing-text">
           Stake Your Code.
-        </h1>
+        </h1></span>
 
+        <span>
         <h2 className="relative mt-2 md:mt-4 font-bold text-purple-600 responsive-subheading leading-tight md:leading-[48px] [font-family:'Inter',Helvetica] animate-fadeIn animation-delay-200 transform-gpu translate-z-40">
           Level Up Your Career.
         </h2>
+        </span>
 
         <p className="relative max-w-[328px] md:max-w-[528px] lg:max-w-[628px] mt-4 md:mt-6 lg:mt-8 text-gray-400 responsive-text leading-relaxed animate-fadeIn animation-delay-300 transform-gpu translate-z-30">
           Join a community of developers who bet on themselves. Create coding challenges, stake crypto, and earn rewards.
